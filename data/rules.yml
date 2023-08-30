@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Say hello anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say hello and user name anytime the user says hello and his name
+  steps:
+  - intent: greet_with_name
+  - action: utter_greet_with_name
+
+- rule: Say welcome when user say thanks
+  steps:
+  - intent: thanks
+  - action: utter_welcome
+
+- rule: offer help if user asks
+  steps:
+  - intent: help
+  - action: utter_help
+
+- rule: say name when asked
+  steps:
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+
+- rule: say age when asked
+  steps:
+  - intent: bot_age
+  - action: utter_bot_age
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- rule: Show graphic
+  steps:
+  - intent: ask_graphic
+  - action: action_show_window
+
+
+- rule: Show cube with specific size
+  steps:
+  - intent: ask_cube
+  - action: extract_cube_size

@@ -1,0 +1,39 @@
+version: "3.1"
+
+stories:
+
+- story: bot challenge
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: goodbye
+  - action: utter_goodbye
+
+  
+- story: happy_path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: help
+  - action: utter_help
+
+
+- story: happy_path
+  steps:
+  - intent: greet_with_name
+  - action: utter_greet_with_name
+  - intent: bot_challenge
+  - action: utter_bot_challenge
+  - intent: help
+  - action: utter_help
+
+
+
+
+
+
+

@@ -1,0 +1,298 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hey
+    - hello
+    - howdy
+    - sup
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hiya
+    - greetings
+    - yo
+    - hiya mate
+    - hola
+    - salutations
+    - hey ya
+    - hey buddy
+    - what's up
+    - how's it going
+    - nice to meet you
+    - top of the morning to you
+    - hey, what's happening
+    - hey, long time no see
+    - hey, how's your day going
+    - hey, how are you doing today
+    - hey, how's everything with you
+    - hey, hope you're having a great day
+    - hey, how have you been
+    - hey, what have you been up to lately
+- intent: greet_with_name
+  examples: |
+    - hey there i am [Hanane Ait Moussa](user_name)
+    - hi my name is [Hanane ait moussa](user_name)
+    - hello i'm [Hanane Ait Moussa](user_name)
+    - hey there my name is [Hanane ait moussa](user_name)
+    - hi i'm [Hanane](user_name)
+    - good morning i'm [Hanane](user_name)
+    - hello, I go by [Hanane ait moussa], how about you?
+    - hey, my name is [Hanane ait moussa], what's yours?
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks for your help!
+    - Thanks
+    - Thanks for the help
+    - ty
+    - thank you
+    - Thank you so much
+    - Thanks a lot
+    - I really appreciate it
+    - I'm grateful
+    - Many thanks
+    - Much obliged
+    - I owe you one
+    - You're amazing
+    - You've been so helpful
+    - I'm thankful for your assistance
+    - That was very kind of you
+    - I'm really thankful for your support
+    - I can't thank you enough
+    - You're the best
+    - I'm so grateful for your help
+    - You made a big difference
+    - I wanted to express my gratitude
+    - You're awesome
+    - Thank you for everything
+    - I'm deeply thankful
+    - You're a lifesaver    
+- intent: help
+  examples: |
+    - Can you help me?
+    - I need help
+    - Assist me please
+    - Help
+    - Help me
+    - Could you lend me a hand?
+    - I require assistance
+    - Can you give me some guidance?
+    - I'm stuck and need your help
+    - I'm facing an issue and need your support
+    - Can you provide some help?
+    - I'm looking for some help
+    - I'm in a bit of a jam, can you assist?
+    - Can you offer your expertise?
+    - I could really use your help
+    - I'm having trouble and need assistance
+    - Can you point me in the right direction?
+    - I'm seeking some assistance
+    - Can you lend me your knowledge?
+    - Can you give me a hand with this?
+    - I'm struggling and need your help
+    - Can you assist me with this problem?
+    - I'm in need of some help, can you help me out?
+    - Can you offer any guidance?
+    - I need someone to help me, can you?
+    - Can you provide me with some support?
+- intent: bot_challenge
+  examples: |
+    - What are you?
+    - Are you a bot?
+    - Are you a human?
+    - Am I talking to a bot?
+    - Am I talking to a human?
+    - Who are you?
+    - What's your identity?
+    - Are you a real person?
+    - Are you a computer program?
+    - Are you a virtual assistant?
+    - What kind of entity are you?
+    - Can you tell me about yourself?
+    - Are you a human or an AI?
+    - What is your nature?
+    - Are you automated?
+    - Can you introduce yourself?
+    - What is your purpose?
+    - Are you a cha TBot?
+    - Are you an AI assistant?
+    - Can you provide some information about yourself?
+    - What is your role?
+    - Are you a machine?
+    - Can you clarify your existence?
+    - Are you a person or a machine?
+    - Can you disclose your identity?
+    - Can you tell me more about who you are?
+- intent: bot_age
+  examples: |
+    - What's your age?
+    - How old are you?
+    - Your age?
+    - Age?
+    - Can you tell me how old you are?
+    - How many years have you been around?
+    - Are you young or old?
+    - Do you have an age?
+    - When were you born?
+    - How long have you existed?
+    - What is the number of your years?
+    - Are you a new creation or have you been here for a while?
+    - What's the duration of your existence?
+    - Can you disclose your age?
+    - How many years have you been operating?
+    - Are you a recent development or have you been around for a long time?
+    - What is the span of your existence?
+    - Do you age like humans do?
+    - Are you timeless or do you have an age?
+    - How many years have you accumulated?
+    - When did you come into being?
+    - Can you provide some information about your age?
+    - Are you a product of recent technology or have you been here for some time?
+    - How long have you been in existence?
+    - Can you reveal the number of your years?
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - affirm
+    - absolutely
+    - sure
+    - definitely
+    - affirmative
+    - yeah
+    - OK
+    - alright
+    - agreed
+    - precisely
+    - unquestionably
+    - without a doubt
+    - yep
+    - absolutely right
+    - most certainly
+    - no doubt
+    - positively
+    - for sure
+    - you bet
+    - naturally
+    - no question about it
+    - I agree
+    - I concur
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nah
+    - not at all
+    - negative
+    - definitely not
+    - I disagree
+    - I'm not interested
+    - not my preference
+    - not for me
+    - I would say no
+    - not a chance
+    - not convinced
+    - not in agreement
+    - I'm not inclined to agree
+    - I have to decline
+    - count me out
+    - I'm opposed to that
+    - I have reservations
+    - that doesn't work for me
+    - I'm not on board
+    - I'd rather not
+    - I'm saying no
+    - I'm not keen on that
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - I want to stop
+    - stop the form
+    - end
+    - cease
+    - halt
+    - terminate
+    - cancel
+    - quit
+    - discontinue
+    - finish
+    - put an end to
+    - wrap up
+    - conclude
+    - close
+    - abort
+    - suspend
+    - call it off
+    - desist
+    - withdraw
+    - cut off
+    - break off
+    - refrain
+    - halt proceedings
+    - bring to a halt
+    - put a stop to
+    - bring to a close
+    - pull the plug
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - take care
+    - see you soon
+    - until next time
+    - catch you later
+    - adios
+    - farewell
+    - have a great day
+    - see you next time
+    - see you tomorrow
+    - have a good one
+    - see you in a bit
+    - see you in a while
+    - see you on the flip side
+    - until we meet again
+    - see you down the road
+    - have a wonderful day
+    - see you in a jiffy
+
+
+- intent: ask_graphic
+  examples: |
+    - draw a cube with a cylinder in the middl
+    - show cylinder inside of cube
+- intent: ask_cube
+  examples: |
+    - draw a cube with [length](dimension) [5](value) [width](dimension) [6](value) [height](dimension) [4](value)
+    - show a cube with [length](dimension) [5](value) [width](dimension) [6](value) [height](dimension) [4](value)
+    - i want cube with [length](dimension) [5](value) [width](dimension) [6](value) [height](dimension) [4](value)
+
+
