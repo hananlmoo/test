@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - affirm
+  - bot_age
+  - bot_challenge
+  - deny
+  - goodbye
+  - greet 
+  - greet_with_name
+  - help
+  - stop
+  - thanks
+  - ask_cube
+  - ask_graphic
+entities:
+  - length
+  - width
+  - height
+  - dimension
+  - value
+  - user_name
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: user_name
+  length:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: length
+
+  width:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: width
+  
+  height:
+    type: float
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: height
+
+
+
+responses:
+  utter_greet:
+  - text: Hi there! Is there anything I can help you with?
+  - text: Hey! How may I assist you with your computer needs?
+  utter_greet_with_name:
+  - text: Hello {user_name}! Welcome. How can I assist you today?
+  - text: Hello {user_name}! How can I help you to find what are you wishing?
+  - text: Good day {user_name}! What can I help you find today?
+  utter_welcome:
+  - text: No problem, happy to help!
+  - text: I'm glad I could assist you!
+  utter_help:
+  - text: Of course! What do you need help with?
+  - text: I'm here to assist you. What do you need help with?
+  utter_bot_challenge:
+  - text: I'm a chatbot.
+  utter_bot_age:
+  - text: 2 months
+  utter_goodbye:
+  - text: Goodbye! Have a nice day.
+  - text: Bye! Take care!
+  - text: Goodbye! Have a great day!
+  - text: See you later!
+
+actions:
+  - action_show_window
+  - extract_cube_size
+  - utter_welcome
+  - utter_greet_with_name
+  - utter_help
+  - utter_bot_challenge
+  - utter_goodbye
+  - utter_greet
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

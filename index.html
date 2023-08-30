@@ -1,0 +1,80 @@
+<html>
+    <body>
+    <style>
+              /* Styles pour l'en-tête */
+      .rw-header {
+        background-color: #ff6b6b; /* Couleur rose */
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      /* Styles pour le conteneur de messages */
+      .rw-messages-container {
+        background-color: #ffd3d3; /* Couleur rose clair */
+        padding: 10px;
+        max-height: 400px;
+        overflow-y: scroll;
+      }
+
+      /* Styles pour les messages des utilisateurs */
+      .rw-message .rw-client {
+        background-color: #ff6b6b; /* Couleur rose */
+        color: #fff;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      /* Styles pour les messages du chatbot */
+      .rw-message .rw-response {
+        background-color: #fff;
+        color: #333;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      /* Styles pour le lanceur du chatbot */
+      .rw-launcher {
+        background-color: #ff6b6b; /* Couleur rose */
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+    </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    title: 'Rasa Bot',
+                    subtitle:'Say Hi and get started',
+                  
+
+                    
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          
+          </script>
+    </body>
+</html>
