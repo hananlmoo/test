@@ -1,6 +1,6 @@
 name: test
 image: okteto/python:3
-command: bash -c "pip install pygame && bash"
+command: bash -c "source /usr/src/app/venv/bin/activate && python your_script.py"
 sync:
 - .:/usr/src/app
 forward:
