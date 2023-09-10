@@ -13,7 +13,9 @@ WORKDIR /app
 RUN pip install plotly
 RUN pip install pygame
 RUN pip install pyopengl
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 
+RUN apt-get install -y libgl1-mesa-dev libosmesa6-dev
 # Upgrade pip version
 RUN pip install --no-cache-dir --upgrade pip
 
