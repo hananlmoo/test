@@ -1,0 +1,36 @@
+version: '3.4'
+services:
+  rasa:
+    image: rasa-bot:latest
+    build: "./"
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./data: /app/data
+      - ./actions: /app/actions
+      - ./tests: app/tests
+    command: bash -c "rm -rf .rasa/* && rasa train && rasa run --enable-api --cors \"*\" -p 8080"
+    ports:
+      - '5005:8080'
+    public: true
+    networks:
+      - all
+
+  rasa-actions:
+    build: "./"
+    image: rasa-bot:latest
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./actions: /app/actions
+    command: rasa run actions
+    ports:
+    - '5055:5055'
+    networks:
+      - all
+
+networks:
+  all:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "true"
