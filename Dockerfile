@@ -12,6 +12,7 @@ RUN apt-get update \
 WORKDIR /app
 RUN pip install plotly
 RUN pip install pygame
+RUN pip install OpenGL
 
 # Upgrade pip version
 RUN pip install --no-cache-dir --upgrade pip
