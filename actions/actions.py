@@ -1,5 +1,6 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
+import plotly
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 import plotly.graph_objects as go
